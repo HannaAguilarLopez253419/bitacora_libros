@@ -3,4 +3,8 @@ package com.hann.myapplicationu2.BitacoraLibros.datos.modelo
 import kotlinx.serialization.Serializable
 
 @Serializable
-enum class Estado { PENDIENTE, LEYENDO, FINALIZADO }
+data class FraseDestacada(
+    val texto: String,
+    val autor: String,
+    val libro: String
+)
