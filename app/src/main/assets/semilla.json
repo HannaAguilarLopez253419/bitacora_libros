@@ -1,0 +1,86 @@
+{
+  "libros": [
+    {
+      "id": "sem-001",
+      "titulo": "Pedro Páramo",
+      "autor": "Juan Rulfo",
+      "paginas": 180,
+      "estado": "FINALIZADO",
+      "calificacion": 5,
+      "comentario": "Una lectura corta pero muy intensa. Me gustó cómo se mezclan los vivos y los muertos.",
+      "frase": ""
+    },
+    {
+      "id": "sem-002",
+      "titulo": "El principito",
+      "autor": "Antoine de Saint-Exupéry",
+      "paginas": 96,
+      "estado": "FINALIZADO",
+      "calificacion": 4,
+      "comentario": "Sencillo y bonito. Se lee en una tarde y deja pensando.",
+      "frase": ""
+    },
+    {
+      "id": "sem-003",
+      "titulo": "Cien años de soledad",
+      "autor": "Gabriel García Márquez",
+      "paginas": 320,
+      "estado": "LEYENDO",
+      "frase": ""
+    },
+    {
+      "id": "sem-004",
+      "titulo": "1984",
+      "autor": "George Orwell",
+      "paginas": 328,
+      "estado": "LEYENDO",
+      "frase": ""
+    },
+    {
+      "id": "sem-005",
+      "titulo": "Don Quijote de la Mancha",
+      "autor": "Miguel de Cervantes",
+      "paginas": 863,
+      "estado": "PENDIENTE",
+      "frase": "El que lee mucho y anda mucho, ve mucho y sabe mucho."
+    },
+    {
+      "id": "sem-006",
+      "titulo": "Sapiens",
+      "autor": "Yuval Noah Harari",
+      "paginas": 443,
+      "estado": "PENDIENTE",
+      "frase": ""
+    }
+  ],
+  "recomendados": [
+    {
+      "titulo": "Orgullo y prejuicio",
+      "autor": "Jane Austen",
+      "paginas": 320,
+      "descripcion": "Una historia de amor y de clases sociales, con mucho humor y personajes inolvidables."
+    },
+    {
+      "titulo": "Crimen y castigo",
+      "autor": "Fiódor Dostoievski",
+      "paginas": 560,
+      "descripcion": "La mente de un joven que comete un crimen y no puede escapar de su conciencia."
+    },
+    {
+      "titulo": "Frankenstein",
+      "autor": "Mary Shelley",
+      "paginas": 280,
+      "descripcion": "Un científico crea vida y debe enfrentar las consecuencias de lo que hizo."
+    }
+  ],
+  "fraseCard": {
+    "texto": "La libertad, Sancho, es uno de los más preciosos dones que a los hombres dieron los cielos.",
+    "autor": "Miguel de Cervantes",
+    "libro": "Don Quijote de la Mancha"
+  },
+  "fraseFija": {
+    "texto": "El que lee mucho y anda mucho, ve mucho y sabe mucho.",
+    "autor": "Miguel de Cervantes",
+    "libro": "Don Quijote de la Mancha"
+  }
+}
