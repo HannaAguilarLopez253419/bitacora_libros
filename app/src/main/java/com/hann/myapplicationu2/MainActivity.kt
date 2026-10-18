@@ -1,5 +1,6 @@
 package com.hann.myapplicationu2
 
+import android.app.Application
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -18,7 +19,12 @@ import androidx.lifecycle.LifecycleCoroutineScope
 import androidx.lifecycle.lifecycleScope
 import com.hann.myapplicationu2.BitacoraLibros.datos.fuentedatos.SemillaDataSource
 import com.hann.myapplicationu2.BitacoraLibros.di.BitacoraModule
+import com.hann.myapplicationu2.BitacoraLibros.presentacion.BitacoraRaiz
+import com.hann.myapplicationu2.BitacoraLibros.presentacion.pantallas.biblioteca.BibliotecaPage
 import com.hann.myapplicationu2.ui.theme.MyApplicationU2Theme
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
@@ -27,30 +33,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
             setContent {
-                MyApplicationU2Theme {
-                    Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                        Greeting(
-                            name = "Android",
-                            modifier = Modifier.padding(innerPadding)
-                        )
-                    }
-                }
+                BitacoraRaiz()
             }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MyApplicationU2Theme {
-        Greeting("Android")
     }
 }

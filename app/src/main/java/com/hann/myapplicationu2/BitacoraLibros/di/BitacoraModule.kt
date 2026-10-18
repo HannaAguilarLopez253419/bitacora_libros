@@ -13,6 +13,5 @@ class BitacoraModule(context: Context) {
     private val semillaDataSource = SemillaDataSource(appContext)
     private val localDataSource = LibroLocalDataSource(appContext)
 
-    val libroRepository: LibroRepository =
-        LibroRepositoryImpl(semillaDataSource, localDataSource)
+    val libroRepository: LibroRepository = LibroRepositoryImpl(semillaDataSource, localDataSource)
 }
