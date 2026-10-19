@@ -1,40 +1,50 @@
 package com.hann.myapplicationu2.BitacoraLibros.presentacion
 
-import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.layout.consumeWindowInsets
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.hann.myapplicationu2.BitacoraLibros.presentacion.pantallas.biblioteca.BibliotecaPage
-import com.hann.myapplicationu2.BitacoraLibros.presentacion.pantallas.formulario.FormularioPage
-import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.bitacoraFactory
+import androidx.compose.ui.Modifier
+import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
+import com.hann.myapplicationu2.BitacoraLibros.presentacion.componentes.BarraInferior
+import com.hann.myapplicationu2.BitacoraLibros.presentacion.navegacion.BitacoraNavHost
+import com.hann.myapplicationu2.BitacoraLibros.presentacion.navegacion.Destino
 import com.hann.myapplicationu2.ui.theme.MyApplicationU2Theme
 
 @Composable
 fun BitacoraRaiz() {
     MyApplicationU2Theme {
-        var enFormulario by rememberSaveable { mutableStateOf(false) }
-        var aperturas by rememberSaveable { mutableIntStateOf(0) }
+        val navController = rememberNavController()
+        val entradaActual by navController.currentBackStackEntryAsState()
+        val rutaActual = entradaActual?.destination?.route
+        val mostrarBarra = Destino.conBarra.any { it.ruta == rutaActual }
 
-        if (enFormulario) {
-            BackHandler { enFormulario = false }
-            FormularioPage(
-                libroId = null,
-                onVolver = { enFormulario = false },
-                viewModel = viewModel(
-                    key = "formulario-$aperturas",
-                    factory = bitacoraFactory()
-                )
-            )
-        } else {
-            BibliotecaPage(
-                onAgregarClick = {
-                    aperturas++
-                    enFormulario = true
+        Scaffold(
+            bottomBar = {
+                if (mostrarBarra) {
+                    BarraInferior(
+                        rutaActual = rutaActual,
+                        onSeleccionar = { destino ->
+                            navController.navigate(destino.ruta) {
+                                popUpTo(navController.graph.findStartDestination().id) {
+                                    saveState = true
+                                }
+                                launchSingleTop = true
+                                restoreState = true
+                            }
+                        }
+                    )
                 }
+            }
+        ) { innerPadding ->
+            BitacoraNavHost(
+                navController = navController,
+                modifier = Modifier
+                    .padding(innerPadding)
+                    .consumeWindowInsets(innerPadding)
             )
         }
     }
