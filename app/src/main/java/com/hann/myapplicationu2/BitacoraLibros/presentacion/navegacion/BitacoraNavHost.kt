@@ -56,7 +56,10 @@ fun BitacoraNavHost(
             val libroId = entrada.arguments?.getString(Destino.Formulario.ARG_ID)
             FormularioPage(
                 libroId = libroId,
-                onVolver = { navController.popBackStack() }
+                onVolver = { navController.popBackStack() },
+                onGuardado = {
+                    navController.popBackStack(Destino.Biblioteca.ruta, inclusive = false)
+                }
             )
         }
 
@@ -70,7 +73,8 @@ fun BitacoraNavHost(
             DetallePage(
                 libroId = libroId,
                 onVolver = { navController.popBackStack() },
-                onEditar = { id -> navController.navigate(Destino.Formulario.crearRuta(id)) }
+                onEditar = { id -> navController.navigate(Destino.Formulario.crearRuta(id)) },
+                onEliminado = { navController.popBackStack() }
             )
         }
     }

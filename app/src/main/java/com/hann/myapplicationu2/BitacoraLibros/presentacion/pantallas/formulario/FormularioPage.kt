@@ -23,6 +23,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
@@ -32,19 +33,19 @@ import com.hann.myapplicationu2.BitacoraLibros.datos.modelo.EstadoLectura
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.componentes.etiqueta
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.FormularioViewModel
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.bitacoraFactory
-import androidx.compose.runtime.getValue
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FormularioPage(
     libroId: String? = null,
     onVolver: () -> Unit = {},
+    onGuardado: () -> Unit = onVolver,
     viewModel: FormularioViewModel = viewModel(factory = bitacoraFactory())
 ) {
     val estado by viewModel.uiState.collectAsStateWithLifecycle()
 
     LaunchedEffect(libroId) { viewModel.iniciar(libroId) }
-    LaunchedEffect(estado.guardado) { if (estado.guardado) onVolver() }
+    LaunchedEffect(estado.guardado) { if (estado.guardado) onGuardado() }
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
