@@ -23,6 +23,9 @@ class BitacoraViewModelFactory(
         modelClass.isAssignableFrom(DetalleViewModel::class.java) ->
             DetalleViewModel(repositorio) as T
 
+        modelClass.isAssignableFrom(InicioViewModel::class.java) ->
+            InicioViewModel(repositorio) as T
+
         else -> throw IllegalArgumentException("ViewModel desconocido: ${modelClass.name}")
     }
 }
