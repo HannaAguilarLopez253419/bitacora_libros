@@ -32,7 +32,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.hann.myapplicationu2.BitacoraLibros.datos.modelo.EstadoLectura
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.componentes.etiqueta
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.FormularioViewModel
-import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.bitacoraFactory
+import com.hann.myapplicationu2.BitacoraLibros.factory.bitacoraFactory
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

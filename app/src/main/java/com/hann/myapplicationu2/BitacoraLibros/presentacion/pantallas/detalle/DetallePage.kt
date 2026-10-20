@@ -37,7 +37,7 @@ import com.hann.myapplicationu2.BitacoraLibros.presentacion.componentes.FilaDato
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.componentes.PortadaLibroGrande
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.componentes.etiqueta
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.DetalleViewModel
-import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.bitacoraFactory
+import com.hann.myapplicationu2.BitacoraLibros.factory.bitacoraFactory
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

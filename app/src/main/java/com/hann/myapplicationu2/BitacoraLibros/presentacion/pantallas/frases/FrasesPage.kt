@@ -22,7 +22,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.componentes.TarjetaFrase
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.FrasesViewModel
-import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.bitacoraFactory
+import com.hann.myapplicationu2.BitacoraLibros.factory.bitacoraFactory
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

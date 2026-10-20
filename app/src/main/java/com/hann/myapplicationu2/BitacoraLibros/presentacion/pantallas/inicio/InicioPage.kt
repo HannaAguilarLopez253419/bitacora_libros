@@ -30,7 +30,7 @@ import com.hann.myapplicationu2.BitacoraLibros.presentacion.componentes.TarjetaF
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.componentes.TarjetaRecomendado
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.componentes.etiqueta
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.InicioViewModel
-import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.bitacoraFactory
+import com.hann.myapplicationu2.BitacoraLibros.factory.bitacoraFactory
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

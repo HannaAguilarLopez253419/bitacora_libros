@@ -33,7 +33,7 @@ import com.hann.myapplicationu2.BitacoraLibros.datos.modelo.EstadoLectura
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.componentes.TarjetaLibro
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.componentes.etiqueta
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.BibliotecaViewModel
-import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.bitacoraFactory
+import com.hann.myapplicationu2.BitacoraLibros.factory.bitacoraFactory
 
 @Composable
 fun BibliotecaPage(

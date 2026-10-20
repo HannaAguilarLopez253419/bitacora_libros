@@ -1,4 +1,4 @@
-package com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels
+package com.hann.myapplicationu2.BitacoraLibros.factory
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -7,6 +7,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.hann.myapplicationu2.BitacoraApp
 import com.hann.myapplicationu2.BitacoraLibros.datos.repositorio.LibroRepository
+import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.BibliotecaViewModel
+import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.DetalleViewModel
+import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.FormularioViewModel
+import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.FrasesViewModel
+import com.hann.myapplicationu2.BitacoraLibros.presentacion.viewmodels.InicioViewModel
 
 class BitacoraViewModelFactory(
     private val repositorio: LibroRepository
