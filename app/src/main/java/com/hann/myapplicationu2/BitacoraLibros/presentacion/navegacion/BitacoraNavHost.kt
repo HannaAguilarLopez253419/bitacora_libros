@@ -9,7 +9,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.pantallas.biblioteca.BibliotecaPage
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.pantallas.detalle.DetallePage
-import com.hann.myapplicationu2.BitacoraLibros.presentacion.pantallas.estadisticas.EstadisticasPage
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.pantallas.formulario.FormularioPage
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.pantallas.frases.FrasesPage
 import com.hann.myapplicationu2.BitacoraLibros.presentacion.pantallas.inicio.InicioPage
@@ -37,10 +36,6 @@ fun BitacoraNavHost(
 
         composable(Destino.Frases.ruta) {
             FrasesPage()
-        }
-
-        composable(Destino.Estadisticas.ruta) {
-            EstadisticasPage()
         }
 
         composable(

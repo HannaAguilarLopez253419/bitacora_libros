@@ -5,7 +5,6 @@ sealed class Destino(val ruta: String) {
     data object Inicio : Destino("inicio")
     data object Biblioteca : Destino("biblioteca")
     data object Frases : Destino("frases")
-    data object Estadisticas : Destino("estadisticas")
 
     data object Formulario : Destino("formulario?libroId={libroId}") {
         const val ARG_ID = "libroId"
@@ -21,6 +20,6 @@ sealed class Destino(val ruta: String) {
     }
 
     companion object {
-        val conBarra: List<Destino> = listOf(Inicio, Biblioteca, Frases, Estadisticas)
+        val conBarra: List<Destino> = listOf(Inicio, Biblioteca, Frases)
     }
 }
